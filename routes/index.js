@@ -10,11 +10,19 @@ router.get('/', async function (req, res, next) {
   try {
     person = await api.getRandomPerson();
   } catch (error) {
-    person = error;
+    console.error(error);
+  }
+
+  let imageUrl;
+  try {
+    imageUrl = await api.getImageByName(person.name);
+  } catch (error) {
+    console.error(error);
   }
 
   res.render('index', {
     title: 'Random Ghibli People',
+    image: imageUrl,
     name: person.name,
     age: person.age,
     gender: person.gender,
