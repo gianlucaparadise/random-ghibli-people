@@ -1,0 +1,25 @@
+{
+	"version": 2,
+	"name": "random-ghibli-people",
+	"alias": "random-ghibli-people",
+	"builds": [
+		{
+			"src": "**/*.js",
+			"use": "@now/node"
+		},
+		{
+			"src": "public/*",
+			"use": "@now/static"
+		},
+		{
+			"src": "*.pug",
+			"use": "@now/static"
+		}
+	],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"dest": "/app.js"
+		}
+	]
+}

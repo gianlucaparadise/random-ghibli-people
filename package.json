@@ -2,8 +2,12 @@
   "name": "random-ghibli-people",
   "version": "0.0.0",
   "private": true,
+  "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node app.js",
+    "start-server": "node ./bin/www",
+    "deploy": "now && npm run rm-deploys",
+    "rm-deploys": "now rm --safe --yes random-ghibli-people"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
