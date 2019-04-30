@@ -4,7 +4,7 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "start": "node build/app-bundle.js",
+    "start": "node app.js",
     "start-server": "node ./bin/www",
     "bundle": "npx webpack --config ./webpack.config.js --mode=development",
     "deploy": "now && npm run rm-deploys",

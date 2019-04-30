@@ -4,7 +4,7 @@
 	"alias": "random-ghibli-people",
 	"builds": [
 		{
-			"src": "build/app-bundle.js",
+			"src": "app.js",
 			"use": "@now/node"
 		},
 		{
@@ -19,7 +19,7 @@
 	"routes": [
 		{
 			"src": "/(.*)",
-			"dest": "/build/app-bundle.js"
+			"dest": "/app.js"
 		}
 	]
 }
