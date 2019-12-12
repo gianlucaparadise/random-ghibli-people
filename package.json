@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "main": "app.js",
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
     "start": "node app.js",
     "start-server": "node ./bin/www",
